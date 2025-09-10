@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<title>SannWebsite</title>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url("https://files.catbox.moe/a4lsvp.jpeg") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+      padding: 30px 10px;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 1.5em;
+      margin-bottom: 5px;
+      color: #e5e5e5;
+    }
+
+    i {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      color: #ddd;
+    }
+
+    p {
+      font-size: 0.8em;
+      margin-bottom: 15px;
+      color: #ddd;
+    }
+
+    img.anime {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 25px rgba(200,200,200,0.4);
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: block;
+      width: 85%;
+      max-width: 300px;
+      margin: 12px auto;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      transition: 0.3s;
+      background: linear-gradient(to right, #444, #111);
+      color: white;
+      box-shadow: 0 0 12px #444, 0 0 24px #666, 0 0 36px #888;
+      text-align: center;
+    }
+
+    .btn img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    .btn:hover {
+      opacity: 0.95;
+      box-shadow: 0 0 16px #666, 0 0 32px #999, 0 0 48px #aaa;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+
+    .popup {
+      display: none;
+      background-color: rgba(0,0,0,0.85);
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      background-color: #1f1f1f;
+      padding: 20px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 420px;
+      text-align: left;
+      color: white;
+      overflow-y: auto;
+      max-height: 80vh;
+      box-shadow: 0 0 16px #444, 0 0 32px #666, 0 0 48px #888;
+    }
+
+    .popup-content h2 {
+      margin-top: 0;
+      color: #ccc;
+    }
+
+    .close-btn {
+      background: #333;
+      color: white;
+      padding: 8px 15px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 8px #555, 0 0 16px #777;
+    }
+
+    .close-btn:hover {
+      background: #444;
+      box-shadow: 0 0 12px #777, 0 0 24px #aaa;
+    }
+
+    .identitas img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 10px auto;
+      display: block;
+      box-shadow: 0 0 16px #444, 0 0 32px #666;
+    }
+
+    .identitas h3 {
+      text-align: center;
+      color: #ddd;
+    }
+
+    .identitas p {
+      font-size: 0.95em;
+      text-align: justify;
+    }
+
+    .titik-tiga {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 28px;
+      color: black;
+      cursor: pointer;
+      z-index: 1000;
+      user-select: none;
+      font-weight: bold;
+      background: rgba(255,255,255,0.1);
+      padding: 8px 12px;
+      border-radius: 10px;
+      backdrop-filter: blur(6px);
+      transition: background 0.3s ease;
+      box-shadow: 0 0 12px #444;
+    }
+
+    .titik-tiga:hover {
+      background: rgba(255,255,255,0.2);
+    }
+</style>
+</head>
+<body>
+<img alt="Foto Sannz" class="anime" src="https://files.catbox.moe/c3h10r.png"/>
+<div class="titik-tiga" onclick="showPopup('popupMenuTiga')">⋮</div>
+<h1 style="color: white;">@SannNotDevv</h1>
+<p style="color: white;">NOMOR REAL TRX/GRUB JB SANNZ STORE</p>
+<p style="color: white;">Do one thing every day that scares you. "Eleanor Roosevelt"</p>
+<!-- Tombol utama -->
+<button class="btn" onclick="showPopup('popupBayar')">💰 PAYMENT DISINI</button>
+<button class="btn" onclick="showPopup('popupMenu')">📋 MENU LAINNYA </button>
+<button class="btn" onclick="window.open('https://chat.whatsapp.com/KtsZHlZ8mwh4eMa3kh8MQ4?mode=ems_copy_t','_blank')">
+  <img src="https://files.catbox.moe/c3h10r.png" alt="icon"> STOK PRIBADI SANZ #1
+</button>
+<button class="btn" onclick="window.open('https://chat.whatsapp.com/KtsZHlZ8mwh4eMa3kh8MQ4?mode=ems_copy_t','_blank')">
+  <img src="https://files.catbox.moe/c3h10r.png" alt="icon"> STOK SANN X OWN PT #1
+</button>
+<button class="btn" onclick="window.open('https://whatsapp.com/channel/0029Vb6vbjT8PgsC6KWoQG1l')">
+  <img src="https://files.catbox.moe/c3h10r.png" alt="icon"> TESTIMONI SANZ 
+</button>
+<button class="btn" onclick="window.open('https://chat.whatsapp.com/KtsZHlZ8mwh4eMa3kh8MQ4?mode=ems_copy_t','_blank')">
+  <img src="https://files.catbox.moe/c3h10r.png" alt="icon"> SALURAN SANZ STORE
+</button>
+<button class="btn" onclick="hubungiWhatsapp()">💬 NOMOR ASLI SANNZ
+</button>
+
+<h3 style="color: black;">© 2025 SannNotDevv Website</h3>
+
+<!-- POPUP: Bayar -->
+<div class="popup" id="popupBayar">
+  <div class="popup-content">
+    <h2>🔐 Metode Pembayaran</h2>
+    <i class="text-lg font-semibold" style="color: #02bde3;">𝐍𝐎 𝐃𝐀𝐍𝐀:</i>
+    <i>0895393873212 ATAS NAMA: BEB* AR******</i>
+    <button class="copy-btn" id="copy-btn" onclick="copyDana()">SALIN NOMOR DANA</button>
+    <i class="text-lg font-semibold" style="color: #02bde3;">𝐀𝐓𝐀𝐔 𝐒𝐂𝐀𝐍 𝐐𝐑𝐈𝐒:</i>
+    <img alt="QRIS" src="https://files.catbox.moe/sygtkg.jpeg" style="width:100%; border-radius:15px;"/>
+    <button class="close-btn" onclick="closePopup('popupBayar')" style="width:100%;">Tutup</button>
+        <i class="text-lg font-semibold" style="color: #02bde3;">SETIAP PEMBELIAN WAJIB MENYERTAKAN BUKTI TRANSFER APA TIDAK PEMABYARAN DI ANGGAP TIDAK SAH:</i>
+  </div>
+</div>
+
+<!-- POPUP: Menu -->
+<div class="popup" id="popupMenu">
+  <div class="popup-content">
+    <h2>🛍️ Daftar Jualan</h2>
+    <ul>
+      <li>✅ Nokos Fresh</li>
+      <li>✅ Edit logo list minta admid</li>
+      <li>✅ Script Bug Wa/Tele - Tanya Aja</li> 
+      <li>✅ Suntik sosmed list minta aja</li>
+      <li>✅ Panel Hosting - Tanya Aja</li>
+      <li>✅ Apk qris no ktp rename sc rename apk 10k saja</li>
+    </ul>
+    <button class="close-btn" onclick="closePopup('popupMenu')" style="width:100%;">Tutup</button>
+  </div>
+</div>
+
+<!-- POPUP: Owner -->
+<div class="popup" id="popupOwner">
+  <div class="popup-content identitas">
+    <h2>👑 Identitas Owner</h2>
+    <img alt="Owner" src="https://files.catbox.moe/ynkjfx.png"/>
+    <h3>SannNotDevv</h3>
+    <p>Cuman Ngoding Ngasal Ngasal Aja Aja Gabut Doang </p>
+    <button class="close-btn" onclick="closePopup('popupOwner')" style="width:100%;">Tutup</button>
+  </div>
+</div>
+
+<!-- POPUP: Menu Titik Tiga -->
+<div class="popup" id="popupMenuTiga">
+  <div class="popup-content">
+    <h2>📌 Support & Fitur Tambahan</h2>
+    <ul>
+      <li>• SannNotDevv (Developer)</li>
+      <li>• Yg Support gw (Tuhan Yang Maha Esa)</li>
+      <li>• #FreePalestine🇵🇸</li>
+      <li>• #Boikot Iskontol</li>
+    </ul>
+    <hr/>
+    <ul>
+      <li>• Layanan Premium 24 Jam</li>
+      <li>• Proteksi Anti-Ban</li>
+      <li>• Script WhatsApp MD</li>
+    </ul>
+    <hr/>
+    <!-- Pindahan Tentang Owner -->
+    <button class="btn" onclick="showPopup('popupOwner')" style="width:100%;">👤 Tentang Owner</button>
+    <button class="close-btn" onclick="closePopup('popupMenuTiga')" style="width:90%;">Tutup</button>
+  </div>
+</div>
+
+<script>
+    function showPopup(id) {
+      document.getElementById(id).style.display = "flex";
+    }
+    function closePopup(id) {
+      document.getElementById(id).style.display = "none";
+    }
+    function hubungiWhatsapp() {
+      window.open("https://wa.me/6283199985084","_blank");
+    }
+
+    function onYouTubeIframeAPIReady() {
+      ytPlayer = new YT.Player('ytPlayer');
+    }
+
+    const tag = document.createElement('script');
+    const firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+</script>
+</body>
+</html>
